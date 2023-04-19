@@ -5,42 +5,62 @@ console.log('***** Function Practice *****')
 // to test it and display the result
 
 // 1. Function to return 'Hello World!'
+
 function hello() {
   return 'Hello World!';
 }
+
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
+console.log( hello() );
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
+
 function helloName( name ) {
-  return;
+  return 'Hello, Touathi!';
 }
+
 // Remember to call the function to test
 
+console.log( helloName() );
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber  ) {
   // return firstNumber + secondNumber;
+  let answer = firstNumber + secondNumber;
+  return answer;
 }
 
+console.log( '8 plus 5 equals', addNumbers( 8, 5) );
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num1, num2, num3 ){
+  let answer = num1 * num2 * num3;
+  return answer;
 }
 
+console.log( '2 * 4 * 15 =', multiplyThree( 2, 4, 15));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
+
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
+  } 
+  else {  
+    return false;
   }
-    return;
 }
-// Call the function to test each outcome (true & false) 
+
+// Call the function to test each outcome (true & false)
+
+console.log( 'If the number is greater than 0 then it will be true, false if the number is less than 0');
+console.log( '5 > 0 =', isPositive(5) );
+console.log( '-5 < 0 =', isPositive(-5));
+
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
@@ -49,16 +69,48 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
 
+let animals = ['dog', 'cat', 'bird'];
+
+let Lastitem = animals[ animals.length - 1]
+function getLast1() {  
+  if ( animals.length ) { 
+      return Lastitem;
+  }
+  else {
+    return undefined;
+  }
 }
+
+console.log( 'Test with an filled animal array');
+console.log( 'Last item is', getLast1() );
+
+let option2 = [];
+
+let Lastitem1 = option2[ option2.length - 1]
+function getLast2() {  
+  if ( option2.length ) { 
+      return Lastitem1;
+  }
+  else {
+    return undefined;
+  }
+}
+
+console.log( 'Test with an empty array');
+console.log( 'Last item is', getLast2() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  if (value[ 2 ], array) {
+    return true;
+  }
+    return false;
 }
+
+console.log( 'should be false' );
 
 // ----------------------
 // Stretch Goals
