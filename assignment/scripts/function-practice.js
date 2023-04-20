@@ -70,7 +70,20 @@ console.log( 'isPositive - should say false', isPositive(-20) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
+// Wasn't sure how to do this at first so I made it a little more complicatd for myself and did more coding than I needed to.
 
+console.log( 'Tested a function with an array added in when writting the console log');
+function getLast( array ) {
+  if ( array.length > 0  ) {
+    return array[ array.length - 1];
+  }
+  else {
+    return undefined;
+  }
+}
+
+console.log( 'Should be 6 =', getLast( [1, 2, 3, 4, 5, 6]  ) );
+console.log( 'Should be undefined =', getLast( [ ] ) );
 
 function getLast1() {  
 
@@ -86,8 +99,6 @@ let Lastitem = animals[ animals.length - 1]
 }
 console.log( 'Test with an filled animal array');
 console.log( 'Last item is', getLast1() );
-
-
 
 
 function getLast2() {  
