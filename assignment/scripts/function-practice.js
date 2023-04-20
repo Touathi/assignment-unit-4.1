@@ -62,18 +62,21 @@ console.log( '5 > 0 =', isPositive(5) );
 console.log( '-5 < 0 =', isPositive(-5));
 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
+console.log( 'isPositive - should say true', isPositive(20) );
 console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'isPositive - should say false', isPositive(-20) );
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-let animals = ['dog', 'cat', 'bird'];
 
-let Lastitem = animals[ animals.length - 1]
+
 function getLast1() {  
+
+let animals = ['dog', 'cat', 'bird'];
+let Lastitem = animals[ animals.length - 1]
+
   if ( animals.length ) { 
       return Lastitem;
   }
@@ -81,14 +84,17 @@ function getLast1() {
     return undefined;
   }
 }
-
 console.log( 'Test with an filled animal array');
 console.log( 'Last item is', getLast1() );
 
-let option2 = [];
 
-let Lastitem1 = option2[ option2.length - 1]
+
+
 function getLast2() {  
+
+let option2 = [];
+let Lastitem1 = option2[ option2.length - 1]
+
   if ( option2.length ) { 
       return Lastitem1;
   }
@@ -96,21 +102,26 @@ function getLast2() {
     return undefined;
   }
 }
-
 console.log( 'Test with an empty array');
 console.log( 'Last item is', getLast2() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find( value, array ){
-  if (value[ 2 ], array) {
-    return true;
+let found = true;
+  for ( let i = 0; i < (array.length); i++ ) {
+    if ( value === array[ i ] ) {
+    return found;
   }
-    return false;
+  }
+   return false;
 }
 
-console.log( 'should be false' );
+
+console.log( 'should be true =', find( 4, [1, 2, 3, 4] ) );
+console.log( 'Should be false =', find( 8, [1, 2, 3, 4] ) );
 
 // ----------------------
 // Stretch Goals
