@@ -11,20 +11,20 @@ function hello() {
 }
 
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Test - should say "Hello World!" :', hello());
 
-console.log( hello() );
+
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 
-function helloName( name ) {
-  return 'Hello, Touathi!';
+function personalHello( name ) {
+  return 'Hello, ' + name + '!'
 }
 
 // Remember to call the function to test
 
-console.log( helloName() );
+console.log(personalHello( 'Touathi' )); 
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber  ) {
@@ -58,7 +58,7 @@ function isPositive( number ) {
 // Call the function to test each outcome (true & false)
 
 console.log( 'If the number is greater than 0 then it will be true, false if the number is less than 0');
-console.log( '5 > 0 =', isPositive(5) );
+console.log( '5 > 0 =', isPositive(5));
 console.log( '-5 < 0 =', isPositive(-5));
 
 // Write a separate console.log statement for each outcome
@@ -70,51 +70,20 @@ console.log( 'isPositive - should say false', isPositive(-20) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-// Wasn't sure how to do this at first so I made it a little more complicatd for myself and did more coding than I needed to.
 
 console.log( 'Tested a function with an array added in when writting the console log');
 function getLast( array ) {
   if ( array.length > 0  ) {
-    return array[ array.length - 1];
+    return array [array.length - 1];
   }
   else {
     return undefined;
   }
 }
 
-console.log( 'Should be 6 =', getLast( [1, 2, 3, 4, 5, 6]  ) );
+console.log( 'last item is ', getLast( [1, 2, 3, 4, 5, 6]  ) );
 console.log( 'Should be undefined =', getLast( [ ] ) );
 
-function getLast1() {  
-
-let animals = ['dog', 'cat', 'bird'];
-let Lastitem = animals[ animals.length - 1]
-
-  if ( animals.length ) { 
-      return Lastitem;
-  }
-  else {
-    return undefined;
-  }
-}
-console.log( 'Test with an filled animal array');
-console.log( 'Last item is', getLast1() );
-
-
-function getLast2() {  
-
-let option2 = [];
-let Lastitem1 = option2[ option2.length - 1]
-
-  if ( option2.length ) { 
-      return Lastitem1;
-  }
-  else {
-    return undefined;
-  }
-}
-console.log( 'Test with an empty array');
-console.log( 'Last item is', getLast2() );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
